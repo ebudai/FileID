@@ -6,7 +6,7 @@
     <Nullable>disable</Nullable>
     <RootNamespace>Budaisoft.FileSystem</RootNamespace>
     <AssemblyName>Budaisoft.FileSystem.FileID</AssemblyName>
-    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
@@ -17,8 +17,8 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <Copyright>Eric Budai</Copyright>
     <Description>Retrieves the OS-supplied unique file/folder ID</Description>
-    <RepositoryUrl>https://github.com/ebudai/Collections.net.git</RepositoryUrl>
-    <PackageProjectUrl>https://github.com/ebudai/Collections.net.git</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/ebudai/FileID.git</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/ebudai/FileID.git</PackageProjectUrl>
     <PackageTags>fileid</PackageTags>
     <PackageReleaseNotes>POSIX is untested</PackageReleaseNotes>
     <PackageIcon>Buddha-Statue-icon.png</PackageIcon>
