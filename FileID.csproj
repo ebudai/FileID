@@ -3,6 +3,26 @@
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;net461</TargetFrameworks>
     <IsWindows Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Windows)))' == 'true'">true</IsWindows>
+    <Nullable>disable</Nullable>
+    <RootNamespace>Budaisoft.FileSystem</RootNamespace>
+    <AssemblyName>Budaisoft.FileSystem.FileID</AssemblyName>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <EnableNETAnalyzers>True</EnableNETAnalyzers>
+    <EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
+    <AnalysisLevel>latest</AnalysisLevel>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <Copyright>Eric Budai</Copyright>
+    <Description>Retrieves the OS-supplied unique file/folder ID</Description>
+    <RepositoryUrl>https://github.com/ebudai/Collections.net.git</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/ebudai/Collections.net.git</PackageProjectUrl>
+    <PackageTags>fileid</PackageTags>
+    <PackageReleaseNotes>POSIX is untested</PackageReleaseNotes>
+    <PackageIcon>Buddha-Statue-icon.png</PackageIcon>
+    <Version>1.0.0</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(IsWindows)'=='true'">
@@ -14,6 +34,15 @@
   </PropertyGroup>
   
   <ItemGroup Condition="$(TargetFramework) != 'net461'">
-    <PackageReference Include="Mono.Posix.NETStandard" Version="5.20.1-preview" />
+    <PackageReference Include="Mono.Posix.NETStandard" Version="1.0.0" />
   </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="images\Buddha-Statue-icon.png" Pack="true" PackagePath="" />
+  </ItemGroup>
+  
 </Project>
