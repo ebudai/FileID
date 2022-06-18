@@ -22,7 +22,7 @@
     <PackageTags>fileid</PackageTags>
     <PackageReleaseNotes>POSIX is untested</PackageReleaseNotes>
     <PackageIcon>Buddha-Statue-icon.png</PackageIcon>
-    <Version>1.0.0</Version>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(IsWindows)'=='true'">
@@ -44,5 +44,8 @@
   <ItemGroup>
     <None Include="images\Buddha-Statue-icon.png" Pack="true" PackagePath="" />
   </ItemGroup>
-  
+
+  <ItemGroup>
+    <None Include="README.md" pack="true" PackagePath="." />
+  </ItemGroup>  
 </Project>

@@ -1,6 +1,6 @@
 # FileID
 
-call using FileID.GetUniqueFileID(string|FileInfo|DirectoryInfo).
+call using FileID.GetUniqueFileID(string|FileSystemInfo).
 
 Returns a ulong from the operating system which will be unique only to the current volume.
 
