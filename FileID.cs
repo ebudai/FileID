@@ -1,4 +1,4 @@
-﻿#if Windows || NET461
+﻿#if Windows
 using OS = Budaisoft.FileSystem.FileIDWindows;
 #else
 using OS = Budaisoft.FileSystem.FileIDPosix;

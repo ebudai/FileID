@@ -1,5 +1,4 @@
-﻿#if Windows || NET461
-using Microsoft.Win32.SafeHandles;
+﻿using Microsoft.Win32.SafeHandles;
 using System;
 using System.ComponentModel;
 using System.IO;
@@ -8,7 +7,7 @@ using FILETIME = System.Runtime.InteropServices.ComTypes.FILETIME;
 
 namespace Budaisoft.FileSystem
 {
-    internal static class FileIDWindows
+    public static class FileIDWindows
     {
         public static ulong GetUniqueFileID(string path)
         {
@@ -47,11 +46,11 @@ namespace Budaisoft.FileSystem
             }
         }
 
-        [DllImport("kernel32.dll", SetLastError = true)]
+        [DllImport("kernel32", SetLastError = true)]
         private static extern bool GetFileInformationByHandle(IntPtr hFile, out BY_HANDLE_FILE_INFORMATION lpFileInformation);
 
-        [DllImport("kernel32.dll", SetLastError = true, CharSet = CharSet.Auto)]
-        public static extern SafeFileHandle CreateFile(
+        [DllImport("kernel32", SetLastError = true, CharSet = CharSet.Auto)]
+        private static extern SafeFileHandle CreateFile(
             string filename,
             EFileAccess access,
             EFileShare share,
@@ -236,4 +235,3 @@ namespace Budaisoft.FileSystem
         FirstPipeInstance = 0x00080000
     }
 }
-#endif

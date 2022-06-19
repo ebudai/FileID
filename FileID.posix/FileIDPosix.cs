@@ -1,5 +1,4 @@
-﻿#if !Windows && !NET461
-using Mono.Unix;
+﻿using Mono.Unix;
 
 namespace Budaisoft.FileSystem
 {
@@ -12,4 +11,3 @@ namespace Budaisoft.FileSystem
         }
     }
 }
-#endif
