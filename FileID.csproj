@@ -22,7 +22,7 @@
     <PackageTags>fileid</PackageTags>
     <PackageReleaseNotes>POSIX is untested</PackageReleaseNotes>
     <PackageIcon>Buddha-Statue-icon.png</PackageIcon>
-    <Version>1.0.2</Version>
+    <Version>1.0.3</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(IsWindows)'=='true'">
