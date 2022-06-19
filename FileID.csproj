@@ -1,8 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;net461</TargetFrameworks>
-    <IsWindows Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Windows)))' == 'true'">true</IsWindows>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <Nullable>disable</Nullable>
     <RootNamespace>Budaisoft.FileSystem</RootNamespace>
     <AssemblyName>Budaisoft.FileSystem.FileID</AssemblyName>
@@ -20,30 +19,12 @@
     <RepositoryUrl>https://github.com/ebudai/FileID.git</RepositoryUrl>
     <PackageProjectUrl>https://github.com/ebudai/FileID.git</PackageProjectUrl>
     <PackageTags>fileid</PackageTags>
-    <PackageReleaseNotes>POSIX is untested</PackageReleaseNotes>
     <PackageIcon>Buddha-Statue-icon.png</PackageIcon>
-    <Version>1.0.3</Version>
+    <Version>1.0.4</Version>
   </PropertyGroup>
-
-  <PropertyGroup Condition="'$(IsWindows)'=='true'">
-    <DefineConstants>Windows</DefineConstants>
-  </PropertyGroup>
-
-  <ItemGroup Condition="$(IsWindows) == 'true'">
-    <PackageReference Include="Budaisoft.FileSystem.FileID.Windows" Version="1.0.0" />
-  </ItemGroup>
-
-  <ItemGroup Condition="$(IsWindows) != 'true'">
-    <PackageReference Include="Budaisoft.FileSystem.FileID.Posix" Version="1.0.0" />
-  </ItemGroup>
 
   <ItemGroup>
-    <Compile Remove="FileID.posix\**" />
-    <Compile Remove="FileID.windows\**" />
-    <EmbeddedResource Remove="FileID.posix\**" />
-    <EmbeddedResource Remove="FileID.windows\**" />
-    <None Remove="FileID.posix\**" />
-    <None Remove="FileID.windows\**" />
+    <PackageReference Include="Mono.Posix.NETStandard" Version="1.0.0" />
   </ItemGroup>
 
   <ItemGroup>
