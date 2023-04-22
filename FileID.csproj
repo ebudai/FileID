@@ -15,12 +15,12 @@
     <AnalysisLevel>latest</AnalysisLevel>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <Copyright>Eric Budai</Copyright>
-    <Description>Retrieves the OS-supplied unique file/folder ID</Description>
+    <Description>Retrieves the OS-supplied unique file/folder ID (file index on Windows, inode on Posix)</Description>
     <RepositoryUrl>https://github.com/ebudai/FileID.git</RepositoryUrl>
     <PackageProjectUrl>https://github.com/ebudai/FileID.git</PackageProjectUrl>
     <PackageTags>fileid</PackageTags>
     <PackageIcon>Buddha-Statue-icon.png</PackageIcon>
-    <Version>1.0.4</Version>
+    <Version>1.0.6</Version>
   </PropertyGroup>
 
   <ItemGroup>
